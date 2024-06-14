@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <meta name="description" content="Un reproductor de música con nuevas canciones y lanzamientos.">
+    <meta name="keywords" content="música, reproductor, lanzamientos, canciones, radio">
+    <meta name="author" content="Bass Dimension Club">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-slider">
+        <video class="active" autoplay muted loop>
+            <source src="background-video1.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="background-video2.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="background-video3.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="background-video4.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="background-video5.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="background-video6.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop>
+            <source src="background-video7.mp4" type="video/mp4">
+        </video>
+        <div class="current-song-title" id="currentSongTitleDisplay">
+            <span id="welcomeText"></span><br>
+            <span id="subText"></span>
+        </div>
+        <button class="video-nav left" id="prevVideo">&#9664;</button>
+        <button class="video-nav right" id="nextVideo">&#9654;</button>
+    </div>
+    <header id="mainHeader">
+        <div class="header-content">
+            <img src="https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-logo-horizontal-white-20.png" alt="Spinnin' Records" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">PLAYLISTS</a></li>
+                    <li><a href="#">TALENT POOL</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">CONTESTS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li>
+                        <button id="radioButton">Radio Online</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="releases">
+        <h2>Nuevos Lanzamientos</h2>
+        <div class="songs">
+            <!-- Aquí se generarán las canciones -->
+        </div>
+    </section>
+    <div class="player" id="player">
+        <div class="player-info">
+            <span id="currentSongTitle"></span>
+            <audio id="audioPlayer" hidden></audio>
+            <div class="controls">
+                <button id="prevButton">&#9664;</button>
+                <button id="playPauseButton">&#9654;</button>
+                <button id="nextButton">&#9654;&#9654;</button>
+                <input type="range" id="progressBar" value="0" min="0" step="1">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+            </div>
+        </div>
+        <button id="closePlayer">✖</button>
+    </div>
+    <div class="mini-player" id="miniPlayer">
+        <audio id="radioPlayer" hidden></audio>
+        <div class="mini-controls">
+            <button id="playPauseRadioButton">&#9654;</button>
+            <button id="stopRadioButton">&#9632;</button>
+            <input type="range" id="radioVolumeSlider" min="0" max="1" step="0.1" value="1">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Spinnin' Records. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
